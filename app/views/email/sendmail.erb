@@ -13,6 +13,7 @@ body{
 }
 
 </style>
+
 <div align="center" >
 <img src="https://i.ytimg.com/vi/fFIEddn_sow/maxresdefault.jpg" width="700px" height="350px"
 style="margin-top:50px"/>
@@ -28,7 +29,8 @@ style="margin-top:50px"/>
     
     
 <div  align="center">   
-  <button  type="submit" class="btn btn-default" style="color:#F4A460;" onclick="back()">return</button>
+  <button  type="submit" class="btn btn-default" style="color:red;" onclick="back()">return</button>
+   <input type="button" class="btn btn-default" value="보낸 기록 확인하기" onclick="listPage()"  style="color:red;"></input>
   
  </div> 
 </div>
@@ -37,4 +39,9 @@ function back()
 {
     location.replace("/write");
 }
+function listPage()
+{
+    location.replace("/list");
+}
+
 </script>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   
    root 'email#write'
    get  '/write' => 'email#write'
+   get  '/list' => 'email#list'
    post '/sendmail' => 'email#sendmail'
 
   # Example of regular route:
