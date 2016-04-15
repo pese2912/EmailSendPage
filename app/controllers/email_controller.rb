@@ -40,4 +40,10 @@ class EmailController < ApplicationController
          @every_post = Post.all.order("id desc")
     end
     
+    def delete
+        @destroy_post = Post.find(params[:id])
+        @destroy_post.destroy
+        redirect_to '/list'
+    end
+    
 end

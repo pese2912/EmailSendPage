@@ -8,7 +8,7 @@ Rails.application.routes.draw do
    get  '/write' => 'email#write'
    get  '/list' => 'email#list'
    post '/sendmail' => 'email#sendmail'
-
+   get  '/delete/:id' =>'email#delete'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

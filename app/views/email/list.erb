@@ -26,13 +26,15 @@ style="margin-top:50px"/>
     </div>
     <div align="center">
         <table class="table table-hover">
-             <tr>
+             <tr style="color:#660000; font-size:30px">
                 <th>제목</th><th>내용</th><th>보낸주소</th><th>보낸시간</th>
             </tr>
         <% @every_post.each do |p| %>
 
-            <tr  style="cursor:pointer">
-                <td><%= p.title%></td><td><%= p.content%></td><td><%= p.address%></td><td><%= p.created_at.in_time_zone("Asia/Seoul").strftime("%Y년%m월%d일 %H시%M분%S초") %></td>
+            <tr  style="cursor:pointer; font-size:20px" >
+                <td><%= p.title%></td><td><%= p.content%></td><td><%= p.address%></td><td><%= p.created_at.in_time_zone("Asia/Seoul").strftime("%Y년%m월%d일 %H시%M분%S초") %> 
+                <a href="/delete/<%=p.id%>" class="btn btn-default" style="color:red; margin-left:10px">삭제</a></td>
+                
             </tr>
         
         <% end %>
@@ -42,7 +44,7 @@ style="margin-top:50px"/>
     
     
 <div  align="center">   
-  <input type="button" class="btn btn-default" value="이메일 보내기" onclick="emailsend()"  style="color:red;"></input>
+  <input type="button" class="btn btn-default" value="이메일 보내기"  onclick="emailsend()"  style="color:#660000; font-size:30px ;margin-bottom:50px"></input>
   
  </div> 
 </div>
