@@ -46,4 +46,16 @@ class EmailController < ApplicationController
         redirect_to '/list'
     end
     
+     def update_view
+        @update_post = Post.find(params[:id])
+    end
+    
+    def update_real
+        @update_post = Post.find(params[:id])
+        @update_post.title = params[:title]
+        @update_post.address =params[:address]
+        @update_post.content = params[:content]
+        @update_post.save
+        redirect_to '/list'
+    end
 end

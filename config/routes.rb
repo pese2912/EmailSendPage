@@ -8,7 +8,9 @@ Rails.application.routes.draw do
    get  '/write' => 'email#write'
    get  '/list' => 'email#list'
    post '/sendmail' => 'email#sendmail'
+   post '/update_real/:id' => 'email#update_real'
    get  '/delete/:id' =>'email#delete'
+   get '/update_view/:id' =>'email#update_view'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
